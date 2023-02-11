@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: change to makefile directory
-	run: cd ../..
+        run: cd ../..
       - name: run Makefile
         run: make say-hello
