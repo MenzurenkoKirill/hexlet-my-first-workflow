@@ -4,6 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: install makefile
+        run: apt install make
       - name: change to makefile directory
         run: cd ../..
       - name: run Makefile
