@@ -1,6 +1,18 @@
 name: hello-world
 on: push
 jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: 15ef7706-8d4a-4d0b-9693-8ece4999b344
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
   build:
     runs-on: ubuntu-latest
     steps:

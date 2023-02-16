@@ -1,0 +1,21 @@
+name: hello-world
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install makefile
+        run: name: hello-world
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: change to makefile directory
+        run: cd ../..
+      - name: run Makefile
+        run: make say-hello
+      - name: change to makefile directory
+        run: cd ../..
+      - name: run Makefile
+        run: make say-hello
